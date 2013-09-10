@@ -40,10 +40,10 @@ class Writemaths_Plugin
     }
 
 		//these scripts get loaded everywhere. How do I get them to only load when I'm looking at a post? is_single() seems not to work here
-		wp_enqueue_script('jquery_caretposition', $this->plugin_url . 'assets/jquery.caretposition.js',array('jquery'));
-		wp_enqueue_script('textinputs_jquery', $this->plugin_url . 'assets/textinputs_jquery.js',array('jquery'));
-		wp_enqueue_script('writemaths_plugin', $this->plugin_url . 'assets/writemaths.js',array('jquery','jquery_caretposition','textinputs_jquery','mathjax','jquery-ui-position'));
-		wp_enqueue_script('writemaths_apply', $this->plugin_url . 'assets/writemaths_apply.js',array('writemaths_plugin'));
+		wp_enqueue_script('jquery_caretposition', $this->plugin_url . 'js/jquery.caretposition.js',array('jquery'));
+		wp_enqueue_script('textinputs_jquery', $this->plugin_url . 'js/textinputs_jquery.js',array('jquery'));
+		wp_enqueue_script('writemaths_plugin', $this->plugin_url . 'js/writemaths.js',array('jquery','jquery_caretposition','textinputs_jquery','mathjax','jquery-ui-position'));
+		wp_enqueue_script('writemaths_apply', $this->plugin_url . 'js/writemaths_apply.js',array('writemaths_plugin'));
 	}
 }
 ?>

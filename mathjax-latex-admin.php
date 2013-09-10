@@ -162,8 +162,8 @@ EOT;
             "checked=\"true\"" : "";
 
         $this->admin_table_row
-            ( "Use WriteMaths on comment",
-              "If enabled, the comment reply form will show a preview of MathJax above the textarea.",
+            ( "Show MathJax preview when authoring comment",
+              "If enabled, when a user is typing a comment with MathJax content a small preview of the math will be displayed above the input field.",
               "<input type=\"checkbox\" name=\"kblog_mathjax_use_writemaths\" id=\"use_writemaths\" value=\"1\" ".
               "$use_writemaths/>",
               'use_writemaths'
