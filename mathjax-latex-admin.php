@@ -156,6 +156,21 @@ EOT;
               $select_string,
               'kblog_mathjax_config' );
 
+
+
+        $use_writemaths = get_option( 'kblog_mathjax_use_writemaths', '0' ) ?
+            "checked=\"true\"" : "";
+
+        $this->admin_table_row
+            ( "Use WriteMaths on comment",
+              "If enabled, the comment reply form will show a preview of MathJax above the textarea.",
+              "<input type=\"checkbox\" name=\"kblog_mathjax_use_writemaths\" id=\"use_writemaths\" value=\"1\" ".
+              "$use_writemaths/>",
+              'use_writemaths'
+              );
+
+
+
         $this->table_foot();
 
 
@@ -184,6 +199,9 @@ EOT;
             update_option( "kblog_mathjax_config",
                            $_POST['kblog_mathjax_config'] );
         }
+
+        update_option( "kblog_mathjax_use_writemaths", array_key_exists("kblog_mathjax_use_writemaths",$_POST) );
+        
    }
 
 

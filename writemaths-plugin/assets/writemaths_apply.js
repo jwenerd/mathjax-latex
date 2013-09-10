@@ -1,5 +1,5 @@
 (function($) {
-if(window.MathJax===undefined){
+if(window.MathJax===undefined || true){
 	var script = document.createElement("script");
 	script.type = "text/javascript";
 	script.src  = "https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML.js";

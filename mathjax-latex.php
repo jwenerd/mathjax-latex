@@ -44,6 +44,13 @@ class MathJax{
     if (get_option('kblog_mathjax_force_load')) {
         self::$add_script = true;
     }
+
+    if( get_option('kblog_mathjax_use_writemaths') ){
+      global $writemaths;
+      require_once( dirname( __FILE__ ) . "/writemaths-plugin/writemaths.php" );
+      $writemaths = new Writemaths_Plugin;
+      self::$add_script = true;
+    }
     
     add_shortcode('mathjax', 
                   array(__CLASS__, 'mathjax_shortcode' ));
