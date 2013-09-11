@@ -47,7 +47,7 @@ class MathJax{
 
     if( get_option('kblog_mathjax_use_writemaths') ){
       global $writemaths;
-      require_once( dirname( __FILE__ ) . "/writemaths-plugin/writemaths.php" );
+      require_once( dirname( __FILE__ ) . "/writemaths/writemaths.php" );
       $writemaths = new Writemaths_Plugin;
       self::$add_script = true;
     }
